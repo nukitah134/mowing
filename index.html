@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOGILEV MOWING</title>
+    <title>MOGILEV MOWING | Покос травы</title>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -15,29 +15,31 @@
             url('https://images.unsplash.com/photo-1592419044706-39796d40f98c?q=80&w=2000');
             background-size: cover; background-position: center; text-align: center;
         }
-        h1 { font-family: 'Syncopate'; font-size: clamp(2rem, 8vw, 5rem); margin: 0; text-transform: uppercase; }
-        span { color: var(--neon); text-shadow: 0 0 20px var(--neon); }
-        .btn-main { display: inline-flex; align-items: center; gap: 10px; padding: 20px 40px; margin: 15px; background: var(--tg); color: white; text-decoration: none; border-radius: 50px; font-weight: 900; box-shadow: 0 0 20px rgba(0,136,204,0.4); }
-        .calc-box { max-width: 600px; margin: -60px auto 50px; padding: 40px; background: rgba(255,255,255,0.05); backdrop-filter: blur(15px); border-radius: 30px; border: 1px solid var(--neon); text-align: center; position: relative; z-index: 10; }
+        h1 { font-family: 'Syncopate'; font-size: clamp(2rem, 8vw, 5rem); margin: 0; text-transform: uppercase; line-height: 1; }
+        h1 span { color: var(--neon); text-shadow: 0 0 20px var(--neon); }
+        .hero p { letter-spacing: 5px; opacity: 0.6; margin-bottom: 20px; }
+        .btn-main { display: inline-flex; align-items: center; gap: 10px; padding: 20px 40px; margin: 15px; background: var(--tg); color: white; text-decoration: none; border-radius: 50px; font-weight: 900; box-shadow: 0 0 20px rgba(0,136,204,0.4); transition: 0.3s; }
+        .btn-main:hover { transform: scale(1.05); }
+        .calc-box { max-width: 500px; margin: -80px auto 50px; padding: 40px; background: rgba(255,255,255,0.05); backdrop-filter: blur(15px); border-radius: 30px; border: 1px solid var(--neon); text-align: center; position: relative; z-index: 10; }
         .price { font-size: 4rem; color: var(--neon); font-weight: 900; margin: 15px 0; }
-        input[type=range] { width: 100%; accent-color: var(--neon); cursor: pointer; }
+        input[type=range] { width: 100%; accent-color: var(--neon); cursor: pointer; height: 10px; border-radius: 5px; }
     </style>
 </head>
 <body>
     <header class="hero">
         <div>
-            <p style="letter-spacing: 5px; opacity: 0.6;">PROFESSIONAL SERVICE</p>
+            <p>MOGILEV PROFESSIONAL SERVICE</p>
             <h1>MOGILEV<br><span>MOWING</span></h1>
-            <a href="https://t.me/your_nik" class="btn-main"><i class="fab fa-telegram-plane"></i> НАПИСАТЬ В TELEGRAM</a>
+            <a href="https://t.me/nukitah134" class="btn-main"><i class="fab fa-telegram-plane"></i> НАПИСАТЬ В TELEGRAM</a>
         </div>
     </header>
 
     <div class="calc-box">
-        <h2 style="font-family: 'Syncopate'; font-size: 1.2rem;">КАЛЬКУЛЯТОР СТОИМОСТИ</h2>
-        <p>Площадь: <span id="s_val" style="color:var(--neon); font-weight: 900;">10</span> соток</p>
+        <h2 style="font-family: 'Syncopate'; font-size: 1rem; letter-spacing: 2px;">РАСЧЕТ СТОИМОСТИ</h2>
+        <p>Площадь: <span id="s_val" style="color:var(--neon); font-weight: 900; font-size: 1.2rem;">10</span> соток</p>
         <input type="range" min="1" max="100" value="10" oninput="update(this.value)">
         <div class="price"><span id="p_res">120</span> <small style="font-size: 1rem;">BYN</small></div>
-        <p style="opacity: 0.5; font-size: 0.8rem;">*Точная цена после осмотра участка</p>
+        <p style="opacity: 0.5; font-size: 0.8rem;">*Цена зависит от сложности рельефа</p>
     </div>
 
     <script>
